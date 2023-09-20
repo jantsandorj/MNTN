@@ -113,19 +113,27 @@ body{
     transform: translateY(-50%);
     z-index: 20;
 }
+.scroller {
+  width:3px;
+  border-radius:50px;
+  background: var(--white);
+  position: absolute;
+  margin: auto;
+  top:0;
+  right: 0;
+  height: 60px;
+
+}
 .quick a {
     display: block;
     text-align: right;
     padding-right: 32px;
     color: var(--white);
     font-size: 18px;
-    line-height: 22px;
-    font-weight: 700;
     line-height: 60px;
+    font-weight: 700;
+    height: 60px;
     border-right: 3px solid var(--white-5);
-}
-.quick a.active {
-    border-color: var(--white);
 }
 .visual_copy {
     display: grid;
