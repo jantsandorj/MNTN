@@ -15,7 +15,7 @@ blocks.forEach((block, index) => {
     scrollTrigger: {
       trigger: contentWrap,
       start: "top 80%",
-      end: "bottom 20%",
+      end: "bottom 80%",
       scrub: true,
     },
     delay: index * 0.5,
@@ -67,6 +67,5 @@ gsap.to(circle, {
     start: "top 80%",
     end: "bottom bottom",
     scrub: 1,
-    markers: true,
   },
 });

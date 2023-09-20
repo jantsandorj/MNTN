@@ -15,7 +15,14 @@
     --black:#000000;
     --font1: 'Gilroy-Regular';
     --font2: 'Chronicle Display';
-
+    --font-size-sm: clamp(0.5rem, 0.44vw + 0.43rem, 0.84rem);
+    --font-size-base: clamp(0.63rem, 0.64vw + 0.53rem, 1.13rem);
+    --font-size-md: clamp(0.78rem, 0.92vw + 0.64rem, 1.5rem);
+    --font-size-lg: clamp(0.98rem, 1.31vw + 0.77rem, 2rem);
+    --font-size-xl: clamp(1.22rem, 1.85vw + 0.93rem, 2.66rem);
+    --font-size-xxl: clamp(1.53rem, 2.59vw + 1.12rem, 65px);
+    --font-size-xxxl: clamp(1.91rem, 3.62vw + 1.34rem, 88px);
+    --font-size-extra: clamp(65px, 14vw + 30px, 240px);
 }
 html {
     scroll-behavior: smooth;
@@ -42,8 +49,7 @@ body{
 }
 .bg_img1{
     left: 0; top: 0;
-    animation: bg 1 3s both;
-    animation: cloud 40s linear 3s infinite;
+    animation: cloud 40s linear infinite;
 } 
 .bg_img2{
     left: 0; top: 464px;
@@ -57,14 +63,13 @@ body{
     0% {transform: translateY(0); opacity: 0;}
     50% {opacity: 1;}
     100% {transform: translateY(-50px); opacity: 1;}
-    
 }
 @keyframes cloud {
-    0% {transform: scale(1);}
-    25% {transform: scale(2);}
+    0% {transform: scale(1); transform: translateY(0); opacity: 0.8;}
+    25% {transform: scale(2); opacity: 1;}
     50% {transform: scale(1);}
     75% {transform: scale(2);}
-    100% {transform: scale(1);}
+    100% {transform: scale(1); transform: translateY(-50px); opacity: 1; }
 }
 @keyframes txt {
     0% {transform: translateX(-50px); opacity: 0;}
@@ -89,7 +94,7 @@ body{
 .sns_title {
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     line-height: 22px;
     font-weight: 700;
     color: var(--white);
@@ -129,7 +134,7 @@ body{
     text-align: right;
     padding-right: 32px;
     color: var(--white);
-    font-size: 18px;
+    font-size: var(--font-size-base);
     line-height: 60px;
     font-weight: 700;
     height: 60px;
@@ -150,7 +155,7 @@ body{
     display: flex;
     align-items: center;
     gap: 32px;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     line-height: 22px;
     color: var(--accent);
     letter-spacing: 6px;
@@ -163,7 +168,7 @@ body{
     background: var(--accent);
 }
 .maintitle {
-    font-size: 88px;
+    font-size: var(--font-size-xxxl);
     line-height: 100px;
     color: var(--white);
     font-weight: 600;
@@ -175,7 +180,7 @@ body{
 .text-guide {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: var(--font-size-base);
     line-height: 22px;
     color: var(--white);
     font-weight: 700;
@@ -228,7 +233,7 @@ body{
 }
 .block_count {
     position: absolute;
-    font-size: 240px;
+    font-size: var(--font-size-extra);
     line-height: 240px;
     font-weight: 700;
     opacity: 0.1;
@@ -236,7 +241,7 @@ body{
     left: 0;
 }
 .block_title {
-    font-size: 64px;
+    font-size: var(--font-size-xxl);
     font-weight: 600;
     font-family: var(--font2);
     line-height: 77px;
@@ -246,14 +251,14 @@ body{
     align-items: center;
     gap: 24px;
     color: var(--accent);
-    font-size: 18px;
+    font-size: var(--font-size-base);
     font-weight: 800;
     line-height: 22px;
     letter-spacing: 6px;
     text-transform: uppercase;
 }
 .block_content {
-    font-size: 18px;
+    font-size: var(--font-size-base);
     font-weight: 700;
     line-height: 32px;
 }
@@ -262,7 +267,8 @@ body{
     align-items: center;
     gap: 16px;
     color: var(--accent);
-    font-size: 18px;
+    font-size: var(--font-size-base);
+    
     font-weight: 700;
     line-height: 22px;
 }

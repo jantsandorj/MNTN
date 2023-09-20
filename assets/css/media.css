@@ -6,11 +6,29 @@
     순서:    Header(menu)> Sub Page > Main top(banner) > Footer > Aside
 -------------------------------------------------------------------*/
 
-@media screen and (max-width: 1300.98px) {
-
+@media screen and (max-width: 1600px) {
+    main {width: 100%;}
+    .index-contents {width: calc(100vw - 60px); gap: 100px; margin: -460px 20px 100px}
+    .block {gap: 50px; padding-left: 0px; width: calc(100% - 80px); margin: 0 40px;}
+    .block:nth-child(even) {gap: 50px;}
+    .sns {left: 20px;}
+    .quick {right: 20px;}
+    .bg-image {width: 100%;}
+    .bg_img2 {top: 350px;}
+    .bg_img3 {top: 654px;}
+    .block img {width: 50%; aspect-ratio: 566/720; height: auto; max-width: 566px;}
+    .content_wrap {width: 50%; flex: 0 1 50%;}
+    .bg_img1{animation: none};
+    .gradient-content {width: 100%;}
+    .visual {height: 80vh;}
 }
 @media screen and (max-width: 1000.98px) {
-
+    .maintitle {line-height: normal;}   
+    .bg_img3 {top: 625px;}
+    .gradient-content {height: 600px;}
+    .block_title {line-height: 1.2;}
+    .block_content {line-height: 1;}
+    .block_count {top: 0; line-height: 1;}
 }
 @media screen and (max-width: 767.98px) {
 
